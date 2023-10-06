@@ -3,9 +3,9 @@
 		<TargetFramework>net7.0-windows</TargetFramework>
 		<Platforms>AnyCPU</Platforms>
 		<Version>1.0.1.5</Version>
-		<Authors>PunishedPineapple</Authors>
+		<Authors>Infi, PunishedPineapple</Authors>
 		<Product />
-		<Copyright>Copyright © PunishedPineapple 2022-2023</Copyright>
+		<Copyright>Copyright ©Infi PunishedPineapple 2022-2023</Copyright>
 		<PackageProjectUrl>https://github.com/PunishedPineapple/Distance</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/PunishedPineapple/Distance</RepositoryUrl>
 	</PropertyGroup>

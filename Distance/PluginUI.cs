@@ -4,17 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Threading.Tasks;
-
 using CheapLoc;
-
-using Dalamud.Data;
-using Dalamud.Game.ClientState;
-using Dalamud.Game.Gui;
 using Dalamud.Interface;
 using Dalamud.Interface.Utility;
-using Dalamud.Logging;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
+using Distance.Services;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 
 using ImGuiNET;
@@ -345,7 +340,7 @@ namespace Distance
 				}
 				catch( Exception e )
 				{
-					PluginLog.LogWarning( $"Unable to open the requested link:\r\n{e}" );
+					Service.PluginLog.Warning( $"Unable to open the requested link:\r\n{e}" );
 				}
 
 				ImGui.Spacing();

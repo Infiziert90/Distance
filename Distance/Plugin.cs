@@ -2,19 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-
 using CheapLoc;
-
-using Dalamud.Data;
-using Dalamud.Game;
-using Dalamud.Game.ClientState;
 using Dalamud.Game.ClientState.Conditions;
-using Dalamud.Game.ClientState.Party;
-using Dalamud.Game.ClientState.Objects;
 using Dalamud.Game.ClientState.Objects.Types;
 using Dalamud.Game.Command;
-using Dalamud.Game.Gui;
-using Dalamud.Logging;
 using Dalamud.Plugin;
 using Dalamud.Plugin.Services;
 using Distance.Services;
@@ -63,7 +54,7 @@ namespace Distance
 					var downloadedFile = await BNpcAggroInfoDownloader.DownloadUpdatedAggroDataAsync( Path.Join( mPluginInterface.GetPluginConfigDirectory(), "AggroDistances.dat" ), highestLocalVersion );
 					aggroFile_Config = downloadedFile ?? aggroFile_Config;
 				}
-				
+
 				var fileToUse = aggroFile_Config.FileVersion > aggroFile_Assembly.FileVersion ? aggroFile_Config : aggroFile_Assembly;
 				BNpcAggroInfo.Init( Service.DataManager, fileToUse );
 			} );
@@ -109,7 +100,7 @@ namespace Distance
 			//***** TODO *****
 			var allowedLang = new List<string>{ /*"de", "ja", "fr", "it", "es"*/ };
 
-			PluginLog.Information( "Trying to set up Loc for culture {0}", langCode );
+			Service.PluginLog.Information( "Trying to set up Loc for culture {0}", langCode );
 
 			if( allowedLang.Contains( langCode ) )
 			{
